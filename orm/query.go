@@ -1213,8 +1213,9 @@ func (q *Query) appendFirstTableWithAlias(fmter QueryFormatter, b []byte) (_ []b
 	if q.modelHasTableName() {
 		table := q.model.Table()
 		b = fmter.FormatQuery(b, string(table.FullName))
-		b = append(b, " AS "...)
-		b = append(b, table.Alias...)
+		// // TODO: enable/disable via struct tag. Currently `AS` is not supported in UPDATE queries by Redshift
+		// b = append(b, " AS "...) 
+		// b = append(b, table.Alias...)
 		return b, nil
 	}
 
@@ -1438,8 +1439,8 @@ func appendColumnAndValue(
 		if i > 0 {
 			b = append(b, " AND "...)
 		}
-		b = append(b, alias...)
-		b = append(b, '.')
+		// b = append(b, alias...) // TODO: enable/disable via struct tag
+		// b = append(b, '.')
 		b = append(b, f.Column...)
 		b = append(b, " = "...)
 		if isPlaceholder {
