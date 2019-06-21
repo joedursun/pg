@@ -3,8 +3,8 @@ package pg_test
 import (
 	"fmt"
 
-	"github.com/go-pg/pg"
-	"github.com/go-pg/pg/orm"
+	"github.com/joedursun/pg"
+	"github.com/joedursun/pg/orm"
 )
 
 func init() {
@@ -44,12 +44,12 @@ func createManyToManyTables(db *pg.DB) error {
 	return nil
 }
 
-// go-pg default convention is that:
+// joedursun default convention is that:
 //   - Primary key is called Id, e.g. Model1.Id and Model2.Id.
 //   - Many to many table has columns Model1Id and Model2Id.
 //
 // If you are not using that convention you have 2 options:
-//   1. Use orm.RegisterTable to register m2m table so go-pg has a chance
+//   1. Use orm.RegisterTable to register m2m table so joedursun has a chance
 //      to adopt to your convention.
 //   2. Use `pg:fk:model2_id,joinFK:model1_id` to specify columns.
 func ExampleDB_Model_manyToMany() {

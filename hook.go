@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/go-pg/pg/orm"
+	"github.com/joedursun/pg/orm"
 )
 
 type dummyFormatter struct{}

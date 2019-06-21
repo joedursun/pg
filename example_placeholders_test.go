@@ -3,7 +3,7 @@ package pg_test
 import (
 	"fmt"
 
-	"github.com/go-pg/pg"
+	"github.com/joedursun/pg"
 )
 
 type Params struct {
@@ -15,7 +15,7 @@ func (p *Params) Sum() int {
 	return p.X + p.Y
 }
 
-// go-pg recognizes `?` in queries as placeholders and replaces them
+// joedursun recognizes `?` in queries as placeholders and replaces them
 // with parameters when queries are executed. `?` can be escaped with backslash.
 // Parameters are escaped before replacing according to PostgreSQL rules.
 // Specifically:

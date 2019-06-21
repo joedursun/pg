@@ -1,4 +1,4 @@
-module github.com/go-pg/pg
+module github.com/joedursun/pg
 
 go 1.12
 

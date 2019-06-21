@@ -3,7 +3,7 @@ package parser
 import (
 	"fmt"
 
-	"github.com/go-pg/pg/internal"
+	"github.com/joedursun/pg/internal"
 )
 
 type StreamingParser struct {

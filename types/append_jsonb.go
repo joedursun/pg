@@ -1,6 +1,6 @@
 package types
 
-import "github.com/go-pg/pg/internal/parser"
+import "github.com/joedursun/pg/internal/parser"
 
 func AppendJSONB(b, jsonb []byte, flags int) []byte {
 	if hasFlag(flags, arrayFlag) {
