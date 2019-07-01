@@ -231,7 +231,5 @@ func (q *insertQuery) appendSetExcluded(b []byte, fields []*Field) []byte {
 }
 
 func appendReturningFields(b []byte, fields []*Field) []byte {
-	b = append(b, " RETURNING "...)
-	b = appendColumns(b, "", fields)
 	return b
 }
